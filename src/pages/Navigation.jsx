@@ -4,9 +4,9 @@ import React from 'react'
 export default function Navigation () {
   return (
     <>
-    <button>Main page</button>
-    <button>News page</button>
-    <button>Login</button>
+     <Button variant="outline-dark">Main page</Button>
+     <Button variant="outline-dark">News page</Button>
+     <Button variant="outline-dark">Login</Button>
     </>
   )
 }
