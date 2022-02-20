@@ -7,9 +7,12 @@ import { store } from '../components/redux/store'
 import { Toaster } from 'react-hot-toast'
 import Validation from '../components/validation/Validation'
 import Title from '../components/title/Title'
+import Navigation from './Navigation'
 
 export default function Main() {
   return (
+    <>
+    <Navigation/>
     <Provider store={store}>
       <div className="container">
       <Title>Todo List</Title>
@@ -22,5 +25,6 @@ export default function Main() {
     </div>
       <Validation/>
     </Provider>
+    </>
   )
 }
