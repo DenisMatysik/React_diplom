@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 const url1 = "https://jsonplaceholder.typicode.com/users" // тут доджне быть запро на токен
-const url2 = "https://jsonplaceholder.typicode.com/users" // тут доджне быть запроc po токен
+const url2 = "https://jsonplaceholder.typicode.com/users" // тут доджне быть запроc после токен
 
 export default class Login extends Component {
     sendPromise = ()=>{
