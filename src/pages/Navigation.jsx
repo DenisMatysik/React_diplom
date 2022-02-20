@@ -25,6 +25,5 @@ export default function Navigation () {
      <Button variant="outline-dark">Login</Button>
     </div>
   </div>
-    
   )
 }

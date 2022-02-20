@@ -59,12 +59,15 @@ export default function ModalValidation() {
   return (
     <div className='validation'>
         <form className="validationForm">
-            <h1>Registration</h1>
+            <h1>Login</h1>
             {(emailDirty && emailEror) && <div style={{color:"red"}}>{emailEror}</div>}
             <input onChange={e=>emailHandler(e)} value={email} name='email' className='email' onBlur={e=>blurHandler(e)} type="text" placeholder='Enter you email...'></input>
             {(passwordDirty && passwordEror) && <div style={{color:"red"}}>{passwordEror}</div>}
             <input onChange={e=> passwordHandler(e)} value={password} name='password' className='password' onBlur={e=>blurHandler(e)} type="password" placeholder='Enter you password...'></input>
-            <button disabled={!formValid} className='buttonValidation'>Registration</button>
+            <div>
+              <button disabled={!formValid} className='buttonValidation'>Login</button>
+              <button className='buttonValidation close'>Close</button>
+            </div>
         </form>
     </div>
   )
