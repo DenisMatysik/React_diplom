@@ -1,0 +1,43 @@
+.validation{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+	border-radius: 8px;
+}
+
+.validationForm{
+    background-color: var(--bg-2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+	border-radius: 8px;
+}
+
+.email, .password{
+            margin-top: 0.5rem;
+			margin-bottom: 2rem;
+			width: 100%;
+			padding: 1rem;
+			border: none;
+			background-color: var(--white);
+			font-size: 1.6rem;
+}
+
+.buttonValidation {
+	height: auto;
+	padding: 0.8rem 2rem;
+	border: none;
+	border-radius: 6px;
+	font-size: 1.6rem;
+	cursor: pointer;
+    background-color: #646681;
+	color: white;
+    width: max-content;
+}
+
+/* .buttonValidation:hover{
+	background-color: #646681;
+	color: white;
+} */
