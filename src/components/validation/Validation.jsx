@@ -67,7 +67,6 @@ export default function Validation() {
             <input onChange={e=> passwordHandler(e)} value={password} name='password' className='password' onBlur={e=>blurHandler(e)} type="password" placeholder='Enter you password...'></input>
             <button disabled={!formValid} className='buttonValidation'>Registration</button>
         </form>
-        <Login/>
     </div>
   )
 }

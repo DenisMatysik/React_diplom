@@ -4,7 +4,7 @@ import React from 'react'
 export default function Navigation () {
   return (
     <>
-     <Button variant="primary">Main</Button>{' '}
+    <button>Main page</button>
     <button>News page</button>
     <button>Login</button>
     </>
