@@ -1,6 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import Main from './Main';
+import Notfoundpage from './Notfoundpage';
+import News from './news/News';
+
 
 const navStyle = {
   display: "flex",
@@ -18,12 +23,15 @@ const navContainer = {
 
 export default function Navigation () {
   return (
-    <div style={navContainer}>
+    <>
+    {/* <div style={navContainer}>
       <div style={navStyle}>
-     <Button variant="outline-dark">Main page</Button>
-     <Button variant="outline-dark">News page</Button>
+        <a href='/'>Main page</a>
+        <a href='/news'>News page</a>
      <Button variant="outline-dark">Login</Button>
     </div>
-  </div>
+  </div> */}
+  
+    </>
   )
 }
