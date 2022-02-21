@@ -6,8 +6,8 @@ export const AuthContext = createContext(null)
 export default function AuthProvider({children}) {
     const [user, setUser] = useState(null);
 
-    const singin = (newuser, callback)=>{
-        setUser(newuser);
+    const singin = (newUser, callback)=>{
+        setUser(newUser);
         callback();
     }
     const singout = (callback)=>{

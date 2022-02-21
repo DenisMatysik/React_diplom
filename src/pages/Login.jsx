@@ -6,20 +6,21 @@ import React from 'react'
 export default function Login() {
     const navigate = useNavigate();
     const location = useLocation();
-    const {signin} = useAuth();
+    const {singin} = useAuth();
     const fromPage = location.state?.from?.pathname || "/";
+
     const handleSubmit = (e)=>{
-        e.preventDefaulte();
+        e.preventDefault();
         const form = e.target;
         const user = form.username.value;
-        signin(user, ()=> navigate(fromPage, {replace:true}))
+        singin(user, ()=> navigate(fromPage, {replace:true}))
     }
   return (
     <div>
         <h1>Login page</h1>
         <form onSubmit={handleSubmit}>
             <label>
-                Name: <input name="username"></input>
+                Name: <input name="username"/>
             </label>
             <button type="submit">Login</button>
         </form>

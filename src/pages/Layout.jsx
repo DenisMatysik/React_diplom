@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
+import Logout from './Logout'
 
 const navStyle = {
     display: "flex",
@@ -20,6 +21,7 @@ const Layout=()=> {
         <NavLink style={setActive} className="link" to="/">Main</NavLink>
         <NavLink style={setActive} className="link" to="/news">News</NavLink>
         <NavLink style={setActive} className="link" to="/login">Login</NavLink>
+        <Logout/>
     </div>
         <Outlet/>
       </>

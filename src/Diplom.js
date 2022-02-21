@@ -14,7 +14,7 @@ export default function Diplom() {
   return (
     <AuthProvider>
       <Routes>
-        <Route path='/' element={<Layout/>}>
+          <Route path='/' element={<Layout/>}>
           <Route index element={<Main/>}></Route>
           <Route path='news' element={<News/>}></Route>
           <Route path='news/:uuid' element={
