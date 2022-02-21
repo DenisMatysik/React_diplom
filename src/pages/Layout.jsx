@@ -19,6 +19,7 @@ const Layout=()=> {
       <div style={navStyle}>
         <NavLink style={setActive} className="link" to="/">Main</NavLink>
         <NavLink style={setActive} className="link" to="/news">News</NavLink>
+        <NavLink style={setActive} className="link" to="/login">Login</NavLink>
     </div>
         <Outlet/>
       </>
