@@ -5,8 +5,8 @@ export default function News() {
   return (
     <div>
       <Accordion>
-                <Accordion.Header>Title Accordion 1</Accordion.Header>
-                <Accordion.Content>Text Accordion 1</Accordion.Content>
+                <Accordion.Header>Тут должен быть fetch запрос с выводом темы новостей</Accordion.Header> 
+                <Accordion.Content>Тут должен быть fetch запрос с выводом самой новости</Accordion.Content>
             </Accordion>
     </div>
   )
