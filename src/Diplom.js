@@ -1,6 +1,6 @@
 import React from 'react'
 import Main from './pages/Main'
-import {BrowserRouter,Routes, Route, Link} from "react-router-dom"
+import {Routes, Route, Link} from "react-router-dom"
 import News from './pages/news/News'
 import Notfoundpage from './pages/Notfoundpage'
 import { Layout } from './pages/Layout'
@@ -11,7 +11,6 @@ import AuthProvider from './components/authorization/AuthProvider'
 
 export default function Diplom() {
   return (
-    <>
     <AuthProvider>
       <Routes>
         <Route path='/' element={<Layout/>}>
@@ -25,8 +24,6 @@ export default function Diplom() {
           <Route path='*' element={<Notfoundpage/>}></Route>
         </Route>
         </Routes>
-    </AuthProvider>
-    </>
-    
+    </AuthProvider>    
   )
 }
