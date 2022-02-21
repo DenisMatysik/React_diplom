@@ -9,6 +9,7 @@ import Login from './pages/Login'
 import RequireAuth from './components/authorization/RequireAuth'
 import AuthProvider from './components/authorization/AuthProvider'
 
+// страница news/:uuid должна быть приватной( после регистрации)
 export default function Diplom() {
   return (
     <AuthProvider>
