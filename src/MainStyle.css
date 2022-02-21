@@ -29,3 +29,43 @@ body {
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+.link{
+	text-decoration: none;
+	color: white;
+}
+
+.newsTitle{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.newsContainer{
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.singleNews{
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+	padding: 1rem;
+
+}
+
+.singleNewsTitle{
+	margin-bottom: 1rem;
+	/* font-size: ; */
+}
+
+.singleNewsBody{
+	width: 80%;
+	border: 3px solid;
+	padding: 1rem;
+}

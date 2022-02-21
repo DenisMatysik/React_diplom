@@ -1,11 +1,11 @@
 
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Notfoundpage() {
   return (
     <div>
-        This page doesn't exist. Go <Link to='/'>main</Link>
+        This page doesn't exist. Go <NavLink to='/'>main</NavLink>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 const navStyle = {
     display: "flex",
@@ -11,19 +11,16 @@ const navStyle = {
     justifyContent: "space-evenly"
   }
   
-const linkStyle={
-    textDecoration: "none",
-    color:"white"
-}
+const setActive = ({isActive}) => ({color: isActive ? "black" : "white"})
 
 const Layout=()=> {
   return (
       <>
       <div style={navStyle}>
-        <Link style={linkStyle} to="/">Main</Link>
-        <Link style={linkStyle} to="/news">News</Link>
+        <NavLink style={setActive} className="link" to="/">Main</NavLink>
+        <NavLink style={setActive} className="link" to="/news">News</NavLink>
     </div>
-            <Outlet/>
+        <Outlet/>
       </>
   )
 }
