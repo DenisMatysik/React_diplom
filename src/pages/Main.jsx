@@ -8,6 +8,7 @@ import { Toaster } from 'react-hot-toast'
 import Title from '../components/title/Title'
 import Navigation from './Navigation'
 import ModalValidation from '../components/modal/ModalValidation'
+import News from './news/News'
 
 export default function Main() {
   return (
@@ -25,6 +26,7 @@ export default function Main() {
     </div>
     </Provider>
     <ModalValidation/>
+    <News/>
     </>
   )
 }
