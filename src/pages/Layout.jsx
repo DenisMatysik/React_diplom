@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-import Logout from './login/Logout'
+import Logout from './login_logout/Logout'
 
 const navStyle = {
     display: "flex",

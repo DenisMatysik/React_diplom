@@ -3,11 +3,17 @@ import { useAuth } from "../../components/authorization/useAuth";
 import React, { useEffect, useState } from 'react'
 import "./Login.css"
 
+
+
 export default function Login() {
+    
     const navigate = useNavigate();
     const location = useLocation();
     const {singin} = useAuth();
     const fromPage = location.state?.from?.pathname || "/";
+
+    const [userAuth, setUserAuth]= useState(false) // залогинен ли пользователь
+
 
     const [email, setEmail]= useState("");
     const [password, setPassword] = useState("");
@@ -16,6 +22,8 @@ export default function Login() {
     const [emailEror, setEmailEror]= useState("Email can't be empty");
     const [passwordEror, setPasswordEror] = useState("Password can't be empty");
     const [formValid, setFormValid]= useState(false);
+
+    console.log(userAuth);
 
     useEffect(()=>{
         if( emailEror|| passwordEror){
@@ -63,13 +71,18 @@ export default function Login() {
     const handleSubmit = (e)=>{
         e.preventDefault();
         const form = e.target;
-        const user = form.email.value;
+        const user = {email, password};
+        user.email = form.email.value;
+        user.password = form.password.value;
+        console.log(user);
+        setUserAuth(true);
         singin(user, ()=> navigate(fromPage, {replace:true}))
     }
 
   return (
     <div>
-        <div className='validation'>
+        {!userAuth && (
+            <div className='validation'>
             <form onSubmit={handleSubmit} className="validationForm">
                 <h1>Login</h1>
                 {(emailDirty && emailEror) && <div style={{color:"red"}}>{emailEror}</div>}
@@ -96,11 +109,11 @@ export default function Login() {
                 disabled={!formValid} 
                 className='buttonValidation'>Login</button>
                 <button 
-                className='buttonValidation close'>Close</button>
+                className='buttonValidation close'>Back</button>
                 </div>
             </form>
         </div>
-
+        )}
     </div>
   )
 }
