@@ -28,7 +28,6 @@ export default function Diplom() {
        transform: "translateX(100%)" },
   })
 
-  // style={{position:"absolute", width:"100%", height:"100%"}}
   return transitions((props, item)=> (
     <animated.div style={props}>
       <div style={{position:"absolute", width:"100%", height:"100%"}} >
