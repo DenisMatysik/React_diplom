@@ -31,7 +31,7 @@ export default function Diplom() {
   // style={{position:"absolute", width:"100%", height:"100%"}}
   return transitions((props, item)=> (
     <animated.div style={props}>
-      <div >
+      <div style={{position:"absolute", width:"100%", height:"100%"}} >
       <AuthProvider>
         <div> 
         <Routes>
