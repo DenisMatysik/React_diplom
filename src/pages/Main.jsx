@@ -12,15 +12,14 @@ export default function Main() {
     <>
     <Provider store={store}>
       <div className="container">
-      <Title>Todo List</Title>
-      <Header>
-      </Header>
-      <Content></Content>
-      <Toaster
-        position="bottom-left"
-        reverseOrder={false}/>
-    </div>
-    </Provider>
+        <Title>Todo List</Title>
+        <Header/>
+        <Content/>
+        <Toaster
+          position="bottom-left"
+          reverseOrder={false}/>
+      </div>
+      </Provider>
     </>
   )
 }

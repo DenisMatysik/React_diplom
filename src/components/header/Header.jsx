@@ -21,7 +21,6 @@ export default function Header() {
         <Button typeButton="button" variant='button--all' value="all" onClick={updateFilter}>All task</Button>
         <Button typeButton="button" variant='button--all' value="complete" onClick={updateFilter}>Complelte task</Button>
         <Button typeButton="button" variant='button--all' value="incomplete" onClick={updateFilter}>Incomplelte task</Button>
-
         </div>
         <Modal type="add" modalOpen={modalOpen} setModalOpen={setModalOpen}/>
     </div>
