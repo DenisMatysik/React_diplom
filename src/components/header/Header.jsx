@@ -11,7 +11,6 @@ export default function Header() {
     const dispatch = useDispatch();
 
     const updateFilter = (e)=>{
-      console.log(e.target.value)
       dispatch(uptadeFilterStatus(e.target.value))
     }
   return (

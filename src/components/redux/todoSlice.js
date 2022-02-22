@@ -11,6 +11,7 @@ const getInitialTodos=()=>{
 const initialState = {
     filterStatus:"all",
     todoList: getInitialTodos(),
+    news:[],
 }
 
 const todoSlice = createSlice({
