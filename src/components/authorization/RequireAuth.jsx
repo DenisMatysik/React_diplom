@@ -7,7 +7,6 @@ import { useAuth } from './useAuth';
 export default function RequireAuth({children}) {
     const location = useLocation();
     const {user} = useAuth();
-
     if (!user){
         return <Navigate to="/login" state={{from: location}}/>
     }
