@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from "../components/authorization/useAuth";
+// import { useAuth } from "../../components/authorization/useAuth";
+import { useAuth } from '../../components/authorization/useAuth';
 
 
 export default function Logout() {

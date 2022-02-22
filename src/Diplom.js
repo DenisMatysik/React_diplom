@@ -5,7 +5,7 @@ import News from './pages/news/News'
 import Notfoundpage from './pages/Notfoundpage'
 import { Layout } from './pages/Layout'
 import Singlenews from './pages/news/Singlenews'
-import Login from './pages/Login'
+import Login from './pages/login/Login'
 import RequireAuth from './components/authorization/RequireAuth'
 import AuthProvider from './components/authorization/AuthProvider'
 
