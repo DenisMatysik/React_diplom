@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-const url = "https://api.thenewsapi.com/v1/news/all?api_token=KXi6VXiltlaVZ3YRpXW8oHX7XbmN10ebwme0bJtM"
+const url = "https://jsonplaceholder.typicode.com/comments" // тут должен быть запрос на API с новостями, но там где я зареган был уже закончен ресурс
 
 export default function News() {
   const [news, setNews]= useState([]);
@@ -11,7 +11,7 @@ export default function News() {
   useEffect(()=>{
     fetch(url)
       .then(res => res.json())
-      .then(data => setNews(data.data))
+      .then(data => setNews(data))
   },[])
 
   return (
@@ -19,8 +19,8 @@ export default function News() {
         <h1 className='newsTitle'>News</h1>
         <div className='newsContainer'>
           {news.map(item =>  (
-          <Link key={item.uuid} to={`/news/${item.uuid}`}>
-            <h3 style={{color:"#585858"}}>{item.title}</h3>
+          <Link key={item.id} to={`/news/${item.id}`}>
+            <h3 style={{color:"#585858"}}>{item.name}</h3>
           </Link>)
             )
           }

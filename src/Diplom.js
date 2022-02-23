@@ -37,7 +37,7 @@ export default function Diplom() {
           <Route path='/' element={<Layout/>}>
           <Route index element={<Main/>}></Route>
           <Route path='news' element={<News/>}></Route>
-          <Route path='news/:uuid' element={
+          <Route path='news/:id' element={
             <RequireAuth>
               <Singlenews/>
             </RequireAuth>}></Route>
