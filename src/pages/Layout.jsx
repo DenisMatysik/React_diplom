@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import Logout from './login_logout/Logout'
+import "../MainStyle.css"
+
 
 const navStyle = {
     display: "flex",
@@ -12,6 +14,13 @@ const navStyle = {
     justifyContent: "space-evenly"
   }
   
+const logInOut = {
+  display: "flex",
+  alignItems: "center",
+  justifyСontent: "space-evenly",
+  width: "100px",
+}
+
 const setActive = ({isActive}) => ({color: isActive ? "black" : "white"})
 
 const Layout=()=> {
@@ -20,8 +29,10 @@ const Layout=()=> {
       <div style={navStyle}>
         <NavLink style={setActive} className="link" to="/">Main</NavLink>
         <NavLink style={setActive} className="link" to="/news">News</NavLink>
-        <NavLink style={setActive} className="link" to="/login">Login</NavLink>
-        <Logout/>
+        <div style={logInOut}>
+          <NavLink style={setActive} className="link" to="/login">Login</NavLink>
+          <Logout/>
+        </div>
     </div>
         <Outlet/>
       </>
