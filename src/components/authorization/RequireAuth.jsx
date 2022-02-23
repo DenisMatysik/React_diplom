@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navigate, useLocation } from 'react-router-dom'
+import { Link, Navigate, useLocation } from 'react-router-dom'
 import { useAuth } from './useAuth';
 
 
@@ -7,8 +7,14 @@ import { useAuth } from './useAuth';
 export default function RequireAuth({children}) {
     const location = useLocation();
     const {user} = useAuth();
-    if (!user){
-        return <Navigate to="/login" state={{from: location}}/>
-    }
-  return children
+
+    if (!user){ // если user нет то будет переадресация
+        return (<div>
+            <>User not authorized</>
+              <Link state={{from: location}} to="/login">Go to authorized</Link>
+            {/* <Navigate to="/login" state={{from: location}}/> */}
+        </div>
+        )
+    } else {
+  return children}
 }

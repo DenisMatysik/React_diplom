@@ -6,14 +6,11 @@ import "./Login.css"
 
 
 export default function Login() {
-    
+
     const navigate = useNavigate();
     const location = useLocation();
     const {singin} = useAuth();
     const fromPage = location.state?.from?.pathname || "/";
-
-    const [userAuth, setUserAuth]= useState(false) // залогинен ли пользователь
-
 
     const [email, setEmail]= useState("");
     const [password, setPassword] = useState("");
@@ -23,7 +20,6 @@ export default function Login() {
     const [passwordEror, setPasswordEror] = useState("Password can't be empty");
     const [formValid, setFormValid]= useState(false);
 
-    console.log(userAuth);
 
     useEffect(()=>{
         if( emailEror|| passwordEror){
@@ -75,13 +71,10 @@ export default function Login() {
         user.email = form.email.value;
         user.password = form.password.value;
         console.log(user);
-        setUserAuth(true);
         singin(user, ()=> navigate(fromPage, {replace:true}))
     }
 
   return (
-    <div>
-        {!userAuth && (
             <div className='validation'>
             <form onSubmit={handleSubmit} className="validationForm">
                 <h1>Login</h1>
@@ -113,7 +106,5 @@ export default function Login() {
                 </div>
             </form>
         </div>
-        )}
-    </div>
   )
 }

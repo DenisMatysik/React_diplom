@@ -14,7 +14,7 @@ import { useTransition, animated } from 'react-spring'
 
 export default function Diplom() {
   const location = useLocation();
-  const transitions = useTransition(location, {
+  const transitions = useTransition(location ,{
     enter: {
       opacity: 1,
       transform: "translateX(0%)",
@@ -28,26 +28,48 @@ export default function Diplom() {
        transform: "translateX(100%)" },
   })
 
-  return transitions((props, item)=> (
-    <animated.div style={props}>
-      <div style={{position:"absolute", width:"100%", height:"100%"}} >
-      <AuthProvider>
-        <div> 
-        <Routes>
-          <Route path='/' element={<Layout/>}>
-          <Route index element={<Main/>}></Route>
-          <Route path='news' element={<News/>}></Route>
-          <Route path='news/:id' element={
-            <RequireAuth>
-              <Singlenews/>
-            </RequireAuth>}></Route>
-          <Route path='login' element={<Login/>}></Route>
-          <Route path='*' element={<Notfoundpage/>}></Route>
-        </Route>
-        </Routes>
-        </div>
-    </AuthProvider>  
+//   return transitions((props, item)=> (
+//     <animated.div style={props}>
+//       <div style={{position:"absolute", width:"100%", height:"100%"}} >
+//       <AuthProvider>
+//         <div> 
+//         <Routes>
+//           <Route path='/' element={<Layout/>}>
+//           <Route index element={<Main/>}></Route>
+//           <Route path='news' element={<News/>}></Route>
+//           <Route path='news/:id' element={
+//             <RequireAuth>
+//               <Singlenews/>
+//             </RequireAuth>}></Route>
+//           <Route path='login' element={<Login/>}></Route>
+//           <Route path='*' element={<Notfoundpage/>}></Route>
+//         </Route>
+//         </Routes>
+//         </div>
+//     </AuthProvider>  
+//       </div>
+//     </animated.div>
+//   ) ) 
+// }
+
+return ( 
+  <div style={{position:"absolute", width:"100%", height:"100%"}} >
+    <AuthProvider>
+      <div> 
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+        <Route index element={<Main/>}></Route>
+        <Route path='news' element={<News/>}></Route>
+        <Route path='news/:id' element={
+          <RequireAuth>
+            <Singlenews/>
+          </RequireAuth>}></Route>
+        <Route path='login' element={<Login/>}></Route>
+        <Route path='*' element={<Notfoundpage/>}></Route>
+      </Route>
+      </Routes>
       </div>
-    </animated.div>
-  ) ) 
+  </AuthProvider>  
+    </div>
+)
 }
