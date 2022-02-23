@@ -3,7 +3,7 @@ import { Link, Navigate, useLocation } from 'react-router-dom'
 import { useAuth } from './useAuth';
 import { MdLogin, MdDoorBack } from 'react-icons/md'
 
-// проверка авторизован ли пользователь (если да то перейдёт на страницу news/конкретная новость/; если не авторизован его перекинет на страницу с login)
+// проверка авторизован ли пользователь (если да то перейдёт на страницу news/конкретная новость/
 export default function RequireAuth({children}) {
     const location = useLocation();
     const {user} = useAuth();
@@ -16,7 +16,7 @@ export default function RequireAuth({children}) {
       flexDirection: "column"
     }
 
-    if (!user){ // если user нет то будет переадресация
+    if (!user){
         return (<div style={someInf}>
             <h1>Only authorized users can read full news</h1>
             <div style={{display:"flex",marginTop:"5rem",}}>

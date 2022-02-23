@@ -85,3 +85,8 @@ body {
 	.icon:hover {
 		background-color: var(--gray-2);
 	}
+
+	.disabled-link {
+		pointer-events: none;
+		color: red;
+	  }
