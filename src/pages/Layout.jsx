@@ -11,7 +11,7 @@ const navStyle = {
     margin: "0 auto",
     width: "100%",
     backgroundColor: "#646681",
-    justifyContent: "space-evenly"
+    justifyContent: "space-around",
   }
   
 const logInOut = {
