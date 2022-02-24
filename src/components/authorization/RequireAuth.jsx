@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Navigate, useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useAuth } from './useAuth';
 import { MdLogin, MdDoorBack } from 'react-icons/md'
 
