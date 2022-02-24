@@ -44,7 +44,7 @@ const Layout=()=> {
           <NavLink style={setActive} onClick={checkUser} className="link" to="/login">Login</NavLink>
           <Logout/>
         </div>
-        {user && (<div style={{color:"white"}}>User:{user.email}</div>)}   
+        {user && (<div style={{color:"white"}}>User:  {user.email}</div>)}   
     </div>
         <Outlet/>
       </>
