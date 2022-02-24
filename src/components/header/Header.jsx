@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import Button from '../button/Button'
 import '../button/Button.scss'
 import Modal from '../modal/Modal'
-import { uptadeFilterStatus } from '../redux/todoSlice'
+import { uptadeFilterStatus } from '../store/todoSlice'
 import "./Header.css"
 
 export default function Header() {

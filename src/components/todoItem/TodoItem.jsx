@@ -2,7 +2,7 @@ import {React,useEffect,useState} from 'react'
 import { MdDelete, MdEdit, MdDone } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
 import "./TodoItem.css"
-import { deleteTodo, updateTodo } from '../redux/todoSlice'
+import { deleteTodo, updateTodo } from '../store/todoSlice'
 import Modal from '../modal/Modal'
 
 export default function TodoItem({todo}) {
