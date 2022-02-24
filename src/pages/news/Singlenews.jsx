@@ -3,7 +3,6 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { MdOutlineDoorBack } from 'react-icons/md'
 
 
-
 export default function Singlenews() {
     const [oneNews, setOneNews]= useState(null)
     const {id} = useParams();

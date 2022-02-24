@@ -2,14 +2,14 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
+import { urlAllNews } from '../../api/fetch';
 
-const url = "https://jsonplaceholder.typicode.com/comments" // тут должен быть запрос на API с новостями, но там где я зареган был уже закончен ресурс
 
 export default function News() {
   const [news, setNews]= useState([]);
 
   useEffect(()=>{
-    fetch(url)
+    fetch(urlAllNews)
       .then(res => res.json())
       .then(data => setNews(data))
   },[])
