@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import TodoItem from '../todoItem/TodoItem';
+import TodoItem from '../TodoItem/TodoItem';
 import "./Content.css"
 
 export default function Content() {

@@ -3,7 +3,7 @@ import { MdDelete, MdEdit, MdDone } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
 import "./TodoItem.css"
 import { deleteTodo, updateTodo } from '../../store/todoSlice'
-import Modal from '../modal/Modal'
+import Modal from '../Modal/Modal'
 
 export default function TodoItem({todo}) {
 const [updateModalOpen, setUpdateModalOpen] = useState(false);

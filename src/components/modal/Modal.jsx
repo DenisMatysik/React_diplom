@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Modal.css"
 import {MdOutlineClose} from "react-icons/md"
-import Button from '../button/Button'
+import Button from '../Button/Button'
 import { useDispatch } from 'react-redux';
 import { addTodo, updateTodo } from '../../store/todoSlice';
 import { toast } from 'react-hot-toast';

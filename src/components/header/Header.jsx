@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import Button from '../button/Button'
-import '../button/Button.scss'
-import Modal from '../modal/Modal'
+import Button from '../Button/Button'
+import '../Button/Button.scss'
+import Modal from '../Modal/Modal'
 import { uptadeFilterStatus } from '../../store/todoSlice'
 import "./Header.css"
 
