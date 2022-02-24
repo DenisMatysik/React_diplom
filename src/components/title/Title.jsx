@@ -2,8 +2,8 @@ import React from 'react'
 import './Title.css'
 
 
-export default function Title({children, ...rest}) {
+export default function Title({children}) {
   return (
-    <h1 className='title' {...rest}>{children}</h1>
+    <h1 className='title'>{children}</h1>
   )
 }

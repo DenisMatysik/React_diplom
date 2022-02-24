@@ -25,15 +25,11 @@ const logInOut = {
 const setActive = ({isActive}) => ({color: isActive ? "black" : "white"})
 
 const Layout=()=> {
-  const [disabledLink, setDisabledLink] = useState("link");
   const {user} = useAuth();
   const [userName, setUserName]= useState(null)
 
   const checkUser =()=>{
-    if (!user){
-      setDisabledLink("link");
-    } else {
-      setDisabledLink("disabled-link");
+    if (user){
       setUserName(user.email);
     }
   }
@@ -45,7 +41,7 @@ const Layout=()=> {
         <NavLink style={setActive} className="link" to="/">Main</NavLink>
         <NavLink style={setActive} className="link" to="/news">News</NavLink>
         <div style={logInOut}>
-          <NavLink style={setActive} onClick={checkUser} className={disabledLink} to="/login">Login</NavLink>
+          <NavLink style={setActive} onClick={checkUser} className="link" to="/login">Login</NavLink>
           <Logout/>
         </div>
         {user && (<div style={{color:"white"}}>User:{user.email}</div>)}   

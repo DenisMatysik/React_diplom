@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../components/authorization/useAuth";
 import React, { useEffect, useState } from 'react'
-import "./Login.css"
+import "./Login.scss"
 
 
 

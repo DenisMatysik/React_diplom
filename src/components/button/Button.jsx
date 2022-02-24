@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Button.css"
+import "./Button.scss"
 
 
 export default function Button({children,typeButton, variant, ...rest}) {
