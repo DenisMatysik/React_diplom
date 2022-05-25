@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React_diplom/static/css/main.3464ae64.css",
+    "main.js": "/React_diplom/static/js/main.64db2f8e.js",
+    "index.html": "/React_diplom/index.html",
+    "main.3464ae64.css.map": "/React_diplom/static/css/main.3464ae64.css.map",
+    "main.64db2f8e.js.map": "/React_diplom/static/js/main.64db2f8e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3464ae64.css",
+    "static/js/main.64db2f8e.js"
+  ]
+}
